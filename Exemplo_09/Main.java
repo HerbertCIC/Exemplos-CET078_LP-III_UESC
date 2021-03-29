@@ -5,50 +5,61 @@ import java.util.Scanner;
 public class Main
 {
   public static void main(String [] args){
-    // Gera um número aleatório entre 1 e 100
-    int númeroAleatório = (int) (Math.random()*100) + 1;
-    boolean ganhou = false;
-    int vezes = 10;
-    int chute;
-    System.out.println("Foi escolhido um número entre 1 e 100.");
-    System.out.println("Você tem " + vezes + " oportunidade(s). Adivinha:");
+  
+  int num = (int) (Math.random()*100) + 1;
+  int chute, chutePC, cont=0,contPC=0, op, left=1, right=100; 
+	System.out.println("Pensei em um número inteiro entre 1 100 (incluidos) tente adivinhar...");
+  //Usuario
+  Scanner scanner = new Scanner(System.in);
+  do{
+    cont++;
+    System.out.println(cont + " tentativa");
+    chute = scanner.nextInt();
+    if(chute==num){
+      System.out.println("Respota correta!\nTentativas = "+ cont);
+      break;
+    }
+    else if(num>chute)
+      System.out.println("Errou!! é maior!!");
+    else
+      System.out.println("Errou!! é menor!!"); 
+  }while(true);
+  //Competidor
+  chutePC =(int) (Math.random()*right) + left;
+  do{
+    if(num==chutePC)
+        op = 0;
+    else if(num>chutePC)
+          op = 1;
+    else
+          op=2;
+		contPC++;
+		switch(op){
+			case 0:
+				System.out.println("Competidor encontrou em tentativas!!!" + contPC);
+				break;
+			case 1: 
+				left = chutePC;
+				chutePC = (left + right) / 2;
+				break;
+			case 2:
+				right = chutePC;
+				chutePC = (left + right) / 2;
+				break;
+			default:
+				break;
+		}
+	}while (op != 0); 
 
-    Scanner scanner = new Scanner(System.in);
-    // Criando um loop para perguntar ao jogador seu chute
-    for(int i = vezes; i > 0; i--){
-      // Lendo a entrada do usuário para comparar com o núemro gerado
-      chute = scanner.nextInt();
-      // Falando para o jogador se o número é menor que ...
-      if (númeroAleatório < chute){
-        System.out.println("É menor que " + chute +  ".");
-      } //ou maior que o número chutado
-      else if(númeroAleatório > chute){
-        System.out.println("É maior que " + chute +  ".");
-      } // Se o chute esta correto saia do loop
-      else{
-        ganhou = true;
-        break;
-      }
-      if (i > 1){
-        System.out.println("Você tem " + (i-1) + " oportunidade(s) restantes.");
-        System.out.println("Chute novamente: ");
-      }
-    }
-    // and tell them they've won
-    if (ganhou){
-      System.out.println("CORRETO... VOCÊ GANHOU!!!");
-    } else {
-      // If they used up all 10 guesses end the loop and tell they've lost
-      System.out.println("GAME OVER... VOCÊ PERDEU!!!");
-      System.out.println("O número: " + númeroAleatório);
-    }
-  }
+  if(cont < contPC){
+      System.out.println("Parabéns você adivinhou primeiro!!!");
+  }else if(cont > contPC)
+      System.out.println("O Competidor adivinhou primeiro!!\n");
+  else
+    System.out.println("Empate !!\n");
+}
 }
 
-
-
-int []  var1, var2, var3;
-int var1, var2[], vare3;
 
 
 
