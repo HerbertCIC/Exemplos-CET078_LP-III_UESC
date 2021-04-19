@@ -26,9 +26,27 @@ public class Main_2{
 		System.out.println("a = " + a + " a1 = " + a1 + " a2 = " + a2);
 		System.out.println("a3 = " + a3 + " a4 = " + a4 + " a5 = " + a5);
 		System.out.println("________________________________________");
+    // Operadores binários
+		System.out.println("Operadores binarios");  
+    int x = 0b00001100;//12 decimal
+    int y = 0b00001010;//10 decimal
+    System.out.format("%d & %d = %d\n", x, y, x & y);// 00001000  AND bit a bit
+    System.out.format("%d | %d = %d\n", x, y, x | y);// 00001110	OR bit a bit
+    System.out.format("%d ^ %d = %d\n", x, y, x ^ y);// 00000110	XOR bit a bit (OU exclusivo)
+    System.out.format("~%d = %d\n", x, ~y);// 11110011 NOT bit a bit (complemento de 1)(unário)								
+    int i = 1;
+    //delocamento de bits à esquerda
+    for(int j=0; j<4; j++){
+      i = i << 1; // deslocamento i de 1 à esquerda, que é o mesmo que multiplicar por 2
+      System.out.format("deslocamento à esquerda %d: %d\n", j, i);
+    }
+    //delocamento de bits à direita
+    for(int j=0; j<4; j++){
+      i = i >> 1; // deslocamento i de 1 à direita, que é o mesmo que dividir por 2
+      System.out.format("deslocamento à direita %d: %d\n", j, i);
+    }
+    printf("________________________________________\n");
 		//Operadores Aritméticos
-		System.out.println("Operadores binarios");
-		// Operadores binários
 		a = a1 + a2; //adição
 		System.out.println(a1 + " + " + a2 + " = " + a);
 		a3 = a2 - a4; //substração
