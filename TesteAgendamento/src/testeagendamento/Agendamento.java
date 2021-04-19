@@ -11,8 +11,8 @@ package testeagendamento;
  */
 public class Agendamento{
     private String nome;     
-    Data data = new Data();
-    Hora hora = new Hora();
+    private Data data = new Data();
+    private Hora hora = new Hora();
     private int duracao;
     private String participantes;
     private boolean status=false;
