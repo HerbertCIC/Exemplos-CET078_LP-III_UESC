@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testeagendamento;
+package data;
 
 /**
  *
  * @author Herbert Nascimento
  */
 public class Hora {
-    private int horas=0;
-    private int minutos=0;
-    private int segundos=0;
+
+    private int horas;
+    private int minutos;
+    private int segundos;
     private String fuso;
 
     public void inicializarHora(int horas, int minutos, int segundos) {
@@ -149,4 +150,6 @@ public class Hora {
     public String toString() {
         return getHoras() + ":" + getMinutos() + ":" + getSegundos() + " - " + getFuso();
     }
+    
+    
 }

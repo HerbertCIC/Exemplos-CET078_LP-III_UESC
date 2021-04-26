@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testeagendamento;
+package contato;
 
 /**
  *
@@ -61,9 +61,11 @@ public class Contato {
         this.telefone = telefone;
     }
 
-     @Override
+    @Override
     public String toString() {
         return "Contato{" + "nome=" + getNome() + ", email=" + getEmail() + ", telefone=" + getTelefone() + '}';
     }
+    
+    
 
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testeagendamento;
+package data;
 
 /**
  *
@@ -60,15 +60,15 @@ public class Data {
         return true;
     }
 
-    public void setDia(int dia) {
+    public boolean setDia(int dia) {
 
-        /*int diaAtual = this.dia;
+        int diaAtual = this.dia;
         this.dia = dia;
-        if (!verificarMinhaData()) {*/
-            this.dia = dia;
-            //*return false;
-       // }
-        //return true;
+        if (!verificarMinhaData()) {
+            this.dia = diaAtual;
+            return false;
+        }
+        return true;
     }
 
     public boolean setMes(int mes) {

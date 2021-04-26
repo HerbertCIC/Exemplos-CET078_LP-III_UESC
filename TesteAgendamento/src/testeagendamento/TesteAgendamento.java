@@ -6,6 +6,7 @@
 package testeagendamento;
 
 
+
 /**
  *
  * @author Herbert Nascimento
@@ -15,7 +16,7 @@ public class TesteAgendamento {
     /**
      * @param args the command line arguments
      */
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         // TODO code application logic here
         Agendamento agend = new Agendamento();  
         
