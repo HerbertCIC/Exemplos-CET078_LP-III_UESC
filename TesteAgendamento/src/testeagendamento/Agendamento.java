@@ -11,8 +11,8 @@ package testeagendamento;
  */
 public class Agendamento{
     private String nome;     
-    Data data = new Data();
-    Hora hora = new Hora();
+    private Data data = new Data();
+    private Hora hora = new Hora();
     private int duracao;
     private String participantes;
     private boolean status=false;
@@ -86,6 +86,11 @@ public class Agendamento{
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Agendamento:" + "\nnome: " + getNome() + "\ndata: " + getData() + "\nhora: " + getHoraInicio() + "\nduracao: " + getDuracao() + "\nparticipantes: " + getParticipantes() + "\nstatus: " + isStatus();
     }
 
 

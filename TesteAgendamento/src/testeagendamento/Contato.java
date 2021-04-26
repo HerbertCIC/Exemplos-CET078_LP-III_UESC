@@ -61,4 +61,9 @@ public class Contato {
         this.telefone = telefone;
     }
 
+     @Override
+    public String toString() {
+        return "Contato{" + "nome=" + getNome() + ", email=" + getEmail() + ", telefone=" + getTelefone() + '}';
+    }
+
 }
