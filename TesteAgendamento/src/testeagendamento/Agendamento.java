@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package testeagendamento;
+import data.*;
 
 /**
  *
@@ -88,6 +89,11 @@ public class Agendamento{
         this.status = status;
     }
 
+    @Override
+    public String toString() {
+        return "Agendamento:" + "\nnome: " + getNome() + "\ndata: " + getData() + "\nhora: " + getHoraInicio() + "\nduracao: " + getDuracao() + "\nparticipantes: " + getParticipantes() + "\nstatus: " + isStatus();
+    }
 
+    
     
 }

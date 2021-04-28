@@ -19,33 +19,31 @@ public class TesteHora {
         // TODO code application logic here
         Hora a = new Hora();       
         
-        a.inicializarHora(2,56,30);
-        System.out.println("------------------------------------------------");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
-        System.out.println("------------------------------------------------");
+        a.inicializarHora(2,56,30);        
+        System.out.println(a.toString());
         
         a.setFuso("Linha de Data internacional Oeste");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
+        System.out.println(a.toString());
         
         a.setFuso("Alasca");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
+        System.out.println(a.toString());
         
         a.setFuso("América Central");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
+        System.out.println(a.toString());
         
         a.setFuso("Salvador");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
+        System.out.println(a.toString());
         
         a.setFuso("Tempo Universal Coordenado");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
+        System.out.println(a.toString());
         
         a.setFuso("Kwait");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
+        System.out.println(a.toString());
         
         a.setFuso("Astana");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
+        System.out.println(a.toString());
         
         a.setFuso("Fiji");
-        System.out.println(a.getFuso()+ " " + a.getHoras() + ":" + a.getMinutos() + ":" + a.getSegundos());
-    }    
+        System.out.println(a.toString());
+    }       
 }

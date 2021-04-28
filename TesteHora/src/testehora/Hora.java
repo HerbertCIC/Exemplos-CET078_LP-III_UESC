@@ -145,4 +145,9 @@ public class Hora {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return getHoras() + ":" + getMinutos() + ":" + getSegundos() + " - " + getFuso();
+    }
 }

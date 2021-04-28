@@ -6,6 +6,7 @@
 package testeagendamento;
 
 
+
 /**
  *
  * @author Herbert Nascimento
@@ -20,13 +21,8 @@ public class TesteAgendamento {
         Agendamento agend = new Agendamento();  
         
         agend.inicializaAgendamento("Dentista", 10, 2, 14, 3, "Fulano da Silva");  
-        System.out.println("-------------------------------------------\n");
-        System.out.println(agend.getNome()+"\nData: "+agend.getData().getDia()+
-                            "/"+agend.getData().getMes()+"/"+agend.getData().getAno()
-                            +"\nInicio: "+agend.getHoraInicio().getHoras()+"h"+"\nDuração: "+agend.getDuracao()
-                            +" h\n"+agend.getParticipantes()+"\nStatus: "+agend.isStatus());
+        System.out.println(agend.toString());
         
-        System.out.println("-------------------------------------------\n");
         agend.cancelarAgendamento();
         
         if(agend.remarcarAgendamento(19, 4))
@@ -36,10 +32,7 @@ public class TesteAgendamento {
         
         System.out.println("-------------------------------------------\n");
         
-        System.out.println(agend.getNome()+"\nData: "+agend.getData().getDia()+
-                            "/"+agend.getData().getMes()+"/"+agend.getData().getAno()
-                            +"\nInicio: "+agend.getHoraInicio().getHoras()+"h"+"\nDuração: "+agend.getDuracao()
-                            +" h\n"+agend.getParticipantes()+"\nStatus: "+agend.isStatus());
+        System.out.println(agend.toString());
     }
     
 }
